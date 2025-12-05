@@ -4,34 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarah & James | Wedding</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- You need to create this directory and file: styles/style.css -->
+    <link rel="stylesheet" href="styles/style.css"> 
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">Sarah & James</div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#story">Our Story</a></li>
-                <li><a href="#details">Wedding Details</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#rsvp">RSVP</a></li>
-                <li><a href="#gifts">Gifts</a></li>
-            </ul>
-            <button class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
+<body class="entrance-active">
 
+<!-- Background Loop Video (Requires background.mp4) -->
+<!-- NOTE: This video runs until the user clicks 'Enter' -->
+<video id="bg-video" autoplay muted loop>
+    <source src="background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
+
+<!-- Golden Frame Content (Entrance) -->
+<div class="frame" id="entrance">
+    <!-- Top Right Logo Placeholder -->
+    <div class="monogram top-right">S&J</div>
+    
+    <!-- Monogram/Logo Placeholder -->
+    <div class="monogram-center">S&J</div>
+    
+    <!-- Khmer Text 1: ពិធីចូលរោងការជ័យមង្គល -->
+    <p class="khmer-text text-xl">ពិធីចូលរោងការជ័យមង្គល</p>
+    
+    <!-- Khmer Text 2: សូមគោរពអញ្ជើញ -->
+    <p class="khmer-text text-lg sub-text">សូមគោរពអញ្ជើញ</p>
+    
+    <!-- English Name -->
+    <p class="couple-name">Mr. Chin Saosereymony and Spouse</p>
+    
+    <!-- Golden Decorative Divider -->
+    <div class="flourish-divider">
+        <i class="fas fa-certificate"></i>
+    </div>
+    
+    <!-- Button with Khmer Text: បើកទំព័រគ្រប់ពេលវេលា -->
+    <button class="enter-btn" id="enter-website-btn">
+        បើកទំព័រគ្រប់ពេលវេលា
+    </button>
+</div>
+
+<!-- Fullscreen Short Video Before Transition (Requires short.mp4) -->
+<div id="short-video-container">
+    <video id="short-video" playsinline>
+        <source src="short.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<!-- MAIN WEBSITE CONTENT (Initially hidden via body.entrance-active overflow: hidden) -->
+<main id="main-content">
+    
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
+        <video class="bg-video" playsinline autoplay muted loop>
+            <source src="video/nature.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="hero-content">
             <h1 class="hero-title">Sarah & James</h1>
             <p class="hero-subtitle">We're Getting Married</p>
@@ -80,11 +112,11 @@
                 </div>
                 <div class="couple-card">
                     <div class="couple-image bride">
-                        <img src="images/groom.jpg" alt="groom">
+                        <img src="images/bride.jpg" alt="bride">
                     </div>
                     <h3>Sarah Thompson</h3>
                     <p>Sarah is a talented graphic designer who finds inspiration in nature. She loves painting, baking, and sharing adventures with James.</p>
-</div>
+                </div>
             </div>
         </div>
     </section>
@@ -179,8 +211,8 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552" alt="Engagement Photo 1">
-</div>
+                    <img src="images/groom.jpg" alt="groom">
+                </div>
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" alt="Engagement Photo 2">
                 </div>
@@ -263,11 +295,11 @@
             <p class="copyright">© 2024 Sarah & James Wedding. All rights reserved.</p>
         </div>
     </footer>
+    
+</main>
+<!-- END MAIN CONTENT -->
 
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" href="styles/style.css">
+<!-- You need to create this directory and file: js/script.js -->
+<script src="js/script.js"></script>
 </body>
 </html>
-
-
-
